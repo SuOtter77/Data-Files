@@ -39,6 +39,16 @@ body {
 	line-height: 1.4;
 }
 
+::selection {
+	color:#e56db6;
+	background-color: #f8e6f17e;
+}
+
+::-moz-selection {
+	color:#e56db6;
+	background-color: #f8e6f17e;
+}
+
 
 /* =============================================
 	Hypertext links
