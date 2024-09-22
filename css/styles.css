@@ -4828,7 +4828,7 @@ textarea.form-control-lg {
 }
 
 a:hover {
-  color: antiquewhite;
+  color: #7eb3de;
   /* hello! */
 }
 
@@ -8137,12 +8137,20 @@ li:hover {
 
 .text-white {
   --bs-text-opacity: 1;
+  width: fit-content;
   text-align: center;
   padding: 10px;
   margin:auto;
   color: rgba(var(--bs-white-rgb), var(--bs-text-opacity)) !important;
+  border-radius:1em;
+  transition: background-color 3s cubic-bezier(0.165, 0.84, 0.44, 1) 0.141592653589793s;
+  overflow:hidden;
 }
 
+.text-white:hover {
+  background-color: #27204f;
+  transition: background-color 0.3s steps(7);
+}
 
 .text-body {
   --bs-text-opacity: 1;
