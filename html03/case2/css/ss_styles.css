@@ -66,6 +66,10 @@ nav.horizontal a {
    display: block;
    text-align: center;
    text-decoration: none;
+   color: rgb(216, 194, 157); /*
+   Added this because none of the links will be visited
+   According to the assignment.
+   As such, the anchor elements have to be colored even if unvisited*/
 }
    
 nav.horizontal a:link, nav.horizontal:visited {
