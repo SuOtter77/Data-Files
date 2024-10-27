@@ -10,12 +10,12 @@
    Filename:         dlr_styles.css
 
 */
-
+@import url(./dlr_tables.css);
 
 /* HTML and Body styles */
 
 html {
-   background: url(dlr_back.png), rgb(165, 146, 165);
+   background: url(../images/dlr_back.png), rgb(165, 146, 165);
    font-family: Verdana, Geneva, sans-serif;
    height: 100%;
 }
