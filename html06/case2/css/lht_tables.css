@@ -1,0 +1,100 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML and CSS, 8th Edition
+   Tutorial 6
+   Case Problem 2
+
+   Calendar Style Sheet
+   Author: Augustus Gullett
+   Date:   11/1
+
+   Filename:   lht_tables.css
+
+*/
+
+/* ===============================
+   Mobile Styles: 0px to 640px 
+   ===============================
+*/
+@media screen and (max-width: 640px) {
+   table,tbody,tr,td,th,caption {
+      display: block;
+   }
+   thead, tr h1 {
+      display: none;
+   }
+   caption {
+      font-size: 1.5em;
+      line-height: 2em;
+      color: white;
+      background: rgb(96, 96, 96); 
+      /* medium gray */
+   }
+   td {
+      border: 1px dotted gray;
+      color: rgb(11, 12, 145);
+      position: relative;
+      padding-left: 40%;
+      min-height: 40px;
+   }
+   td::before {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 40%;
+      padding: 5px;
+      content: attr(date-date);
+   }
+   tr:nth-of-type(odd) {
+      background-color: rgb(255, 235, 178);
+      border: 2px solid gray;
+      
+   }
+}
+
+
+
+/* =============================================
+   Tablet and Desktop Styles: greater than 640px
+   =============================================
+*/
+@media screen and (min-width: 641px) {
+   table {
+      background-image: url(../images/lht_photo1.png);
+      background-size: 40%;
+      background-position: bottom right;
+      background-repeat: no-repeat;
+      border: 8px double rgb(154, 64, 3);
+      border-collapse: collapse;
+      margin: auto;
+      margin-top: 20px;
+      table-layout: fixed;
+      width: 85%
+   }
+   table caption {
+      text-align: center;
+      padding-bottom: 10px;
+      font-size: 1.2em;
+      letter-spacing: 3px;
+   }
+   table thead {
+      background-color: rgb(154, 64, 3);
+   }
+   table td {
+      border: 1px solid gray;
+      font-size: 0.85em;
+      font-weight: normal;
+      padding: 5px;
+      vertical-align: text-top;
+      width: 14.28%;
+      word-wrap: break-word;
+      /* wrap "within individual words" */
+      background-color: rgba(171, 171, 171, 0.6);
+      color: rgb(11, 12, 145);
+   }
+   table td[date-date*="Sep"] {
+      background-color: rgba(232, 214, 148, 0.6);
+      box-shadow: inset 0px 0px 20px gray;
+   }
+}

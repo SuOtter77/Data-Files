@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+/*
+   New Perspectives on HTML5 and CSS3, 8th Edition
+   Tutorial 6
+   Tutorial Case
+
+   Columns Style Sheet
+   Author: Augustus Gullett
+   Date:   10/31/2024
+
+   Filename:         dlr_columns.css
+
+*/
+
+@keyframes error {
+   0% {
+      background: linear-gradient(to right, rgb(236, 8, 8) 95%, black)
+   }
+   20% {
+      background: linear-gradient(to right, rgb(219, 21, 37) 86%, black)
+   }
+   40% {
+      background: linear-gradient(to right, rgb(202, 8, 66) 72%, black)
+   }
+   60% {
+      background: linear-gradient(to right, rgb(185, 8, 95) 58%, black)
+   }
+   80% {
+      background: linear-gradient(to right, rgb(168, 8, 124) 44%, black)
+   }
+   100% {
+      background: linear-gradient(to right, rgb(153, 0, 153) 30%, black);
+   }
+}
+
+/* Column Styles */
+
+@media only screen and (min-width: 641px) {
+   @supports (-moz-appearance:none ) {
+      /* If Firefox */
+      body > header h1 {
+         animation: error 5s;
+      }
+      body > header h1::after {
+         content: ". Firefox does not support widow/orphan declarations";
+      }
+   }
+   article {
+      column-count: 2;
+      column-gap: 30px;
+      column-rule: 2px solid gray;
+
+      widows: 3;
+      orphans: 3;
+      h1 {
+         column-span: all;
+      }
+   }
+
+}
