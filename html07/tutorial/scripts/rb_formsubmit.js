@@ -16,7 +16,7 @@
             The event function returns a value of false so that the
             student does not have to continually retype test values
             in the survey form.
-
+   Essentially just stop any real communication from happening.
 
 */
 
