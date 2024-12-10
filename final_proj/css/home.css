@@ -1,0 +1,6 @@
+#mainContent > div:first-of-type {
+    pointer-events: none;
+}
+iframe {
+    pointer-events: none;
+}

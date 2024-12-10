@@ -1,0 +1,229 @@
+@charset "UTF-8";
+/* Mobile */
+@media screen and (max-width: 720px) {
+    #skipToContent {
+        display: none;
+    }
+
+    .mobileInfoBar {
+        position: absolute;
+        top: 0.6vh;
+        left: 2vw;
+    }
+    .mobileInfoBar label {
+        /* margin: 5px; */
+        font-size: 4em;
+        color: gray;
+        background-color: rgb(242, 247, 252);
+        user-select: none;
+        input {
+            display: none;
+        }
+    }
+    /* Different distances depending on screen width */
+    @media screen and (max-width: 350px) {
+        .mobileInfoBar:has(label > input:checked) {
+            transform: translateX(85vw);
+            transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+            label {    
+                color: rgb(109, 110, 135);
+                font-weight: bold;
+            }
+        }
+    }
+    @media screen and (min-width: 350px) {
+        .mobileInfoBar:has(label > input:checked) {
+            transform: translateX(40vw);
+            transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1);
+            label {    
+                color: rgb(109, 110, 135);
+                font-weight: bold;
+            }
+        }   
+    }
+    
+    /* for mobile */
+    .navbar .container { 
+        background-color: rgb(242, 247, 252);
+        overflow: hidden;
+    }
+}
+
+/* Tablets, maybe */
+@media screen and (min-width: 720px) and (max-width: 1200px){
+    /* Potential tablet adjustments */
+    .mobileInfoBar {
+        display: none;
+    }
+    /* Skip to main */
+    #skipToContent {
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        overflow: hidden;
+    }
+    
+    #skipToContent:link:focus {
+        position: static;
+        width: auto;
+        height: auto;
+    }
+    
+    body:has(#mainContent:target) > #skipToContent {
+        visibility: hidden;
+    }
+    /* Nav bar stuff */
+    .navbar {
+        display: flex;
+        /* gap: 30vw; */
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: nowrap;
+        margin-bottom: 2vh;
+        background-color: rgb(242, 247, 252);   
+        border-style: solid;
+        border-radius: 1rem;
+        border-width: 2px;
+        border-color: rgb(189, 218, 239); 
+        overflow: hidden;
+    }
+    
+    .navbar ul {
+        display: flex;
+        flex-direction: row;
+        gap: 2em;
+        padding: 0px;
+        flex-shrink: 1;
+        align-items: center;
+        list-style: none;
+    }
+    
+    .navbar #home {
+        display: flex;
+        align-items: center;
+        gap: 5%;   
+    }
+    
+    .navbar img {
+        border-style: solid;
+        border-color: rgb(6, 21, 60);
+        border-radius: 10px;
+        border-width: 2px;
+        background-color: white;
+    }
+    
+    .navbar li {
+        color: rgb(50, 128, 224);
+        font-weight: bold;
+    }
+    .navbar a {
+        text-decoration: none;
+        padding: 12px;
+    }
+    .navbar a span {
+        border-width: 2px;
+        border-radius: 5px;
+        border-color: rgb(213, 209, 235);
+        border-style: solid;
+        padding: 5px;
+    }
+    
+    .navbar a:not(:hover) span {
+        background-color: azure;
+    }
+    .navbar a:hover span {
+        background-color: rgb(247,244,226);
+        background: linear-gradient(131deg, rgba(247,244,226,0.9988328094909839) 0%, rgba(244,222,100,1) 32%, rgba(253,172,74,1) 55%, rgba(224,107,54,1) 100%); 
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 1200px) {
+    .mobileInfoBar {
+        display: none;
+    }
+    /* Skip to main */
+    #skipToContent {
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        overflow: hidden;
+    }
+    
+    #skipToContent:link:focus {
+        position: static;
+        width: auto;
+        height: auto;
+    }
+    
+    body:has(#mainContent:target) > #skipToContent {
+        visibility: hidden;
+    }
+    /* Nav bar stuff */
+    .navbar .container {
+        display: flex;
+        gap: 30vw;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: nowrap;
+        margin-bottom: 2vh;
+        background-color: rgb(242, 247, 252);   
+        border-style: solid;
+        border-radius: 1rem;
+        border-width: 2px;
+        border-color: rgb(189, 218, 239); 
+        overflow: hidden;
+    }
+    
+    .navbar ul {
+        display: flex;
+        flex-direction: row;
+        gap: 2em;
+        padding: 0px;
+        flex-shrink: 1;
+        align-items: center;
+        list-style: none;
+    }
+    
+    .navbar #home {
+        display: flex;
+        align-items: center;
+        gap: 5%;   
+    }
+    
+    .navbar img {
+        border-style: solid;
+        border-color: rgb(6, 21, 60);
+        border-radius: 10px;
+        border-width: 2px;
+        background-color: white;
+    }
+    
+    .navbar li {
+        color: rgb(50, 128, 224);
+        font-weight: bold;
+    }
+    .navbar a {
+        text-decoration: none;
+        padding: 12px;
+    }
+    .navbar a span {
+        border-width: 2px;
+        border-radius: 5px;
+        border-color: rgb(213, 209, 235);
+        border-style: solid;
+        padding: 5px;
+    }
+    
+    .navbar a:not(:hover) span {
+        background-color: azure;
+    }
+    .navbar a:hover span, .navbar a:active span {
+        background-color: rgb(247,244,226);
+        background: linear-gradient(131deg, rgba(247,244,226,0.9988328094909839) 0%, rgba(244,222,100,1) 32%, rgba(253,172,74,1) 55%, rgba(224,107,54,1) 100%); 
+    }
+}
+
+@media print {
+    
+}
