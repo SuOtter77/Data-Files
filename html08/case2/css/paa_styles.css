@@ -2,8 +2,8 @@
 
 @font-face {
    font-family: Helsinki;
-   src: url('paa_helsinki.woff') format('woff'),
-        url('paa_helsinki.ttf') format('truetype');
+   src: url('../fonts/paa_helsinki.woff') format('woff'),
+        url('../fonts/paa_helsinki.ttf') format('truetype');
 }
 
 /*
@@ -141,7 +141,7 @@ aside p {
 /* Gamebox Styles */
 
 div#gameBox {
-   background:url(paa_forest.png) center center/ cover no-repeat;
+   background:url(../images/paa_forest.png) center center/ cover no-repeat;
    border-radius: 75px; 
    height: 420px; 
    position: relative; 
